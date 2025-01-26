@@ -1808,11 +1808,11 @@ class Highlight(Story):
         self._fetch_iphone_struct()
         assert self._items is not None
         for item in self._items:
-            if self._iphone_struct_ is not None:
-                for iphone_struct_item in self._iphone_struct_['items']:
-                    if iphone_struct_item['pk'] == int(item['id']):
-                        item['iphone_struct'] = iphone_struct_item
-                        break
+            #if self._iphone_struct_ is not None:
+            #    for iphone_struct_item in self._iphone_struct_['items']:
+            #        if iphone_struct_item['pk'] == int(item['id']):
+            #            item['iphone_struct'] = iphone_struct_item
+            #            break
             yield StoryItem(self._context, item, self.owner_profile)
 
 
